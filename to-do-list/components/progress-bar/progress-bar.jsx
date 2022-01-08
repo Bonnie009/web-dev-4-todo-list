@@ -1,42 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 
+const StyledContainer = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+`;
+
+const StyledBgDiv = styled.div`
+    width: 20%;
+    background-color: #4E4E4E;
+    border-radius: 5px;
+    position: absolute;
+`;
+
+const StyledFrontDiv = styled.div`
+    width: 10%;
+    background-color: #919498;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+`;
+
 const ProgressBar = () => {
     return (
-        <div id="container">
-        </div>
+        <StyledContainer>
+            <StyledFrontDiv>front</StyledFrontDiv>
+            <StyledBgDiv>back</StyledBgDiv>
+        </StyledContainer>
     );
 };
-
-var bar = new ProgressBar.Line(container, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 1400,
-    color: '#000000',
-    trailColor: '#000FFF',
-    trailWidth: 1,
-    svgStyle: {width: '100%', height: '100%'},
-
-    text: {
-        style: {
-            color: '#OOOOOO',
-            position: 'absolute',
-            right: '0',
-            top: '25px',
-            padding: 0,
-            margin: 0,
-            transform: null
-        },
-        autoStyleContainer: false
-        },
-        from: {color: '#000000'},
-        to: {color: '#000FFF'},
-        step: (state, bar) => {
-            bar.setText(Math.round(bar.value () *100));
-        }
-    });
-
-    bar.animate(1.0);
 
 
 export default ProgressBar;
