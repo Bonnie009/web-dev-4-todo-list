@@ -1,49 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const ListItem = styled.div`
-    width:auto;
-    height:auto;
-    border:none;
-`
-const ListBox = styled.li`
-    background-color:#FFFFFF;
-    list-style-type:none;
-`
+const Container = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+`;
 
-const InputBox = styled.input`
-    width:${props => props.iwidth};
-    height: ${props => props.iheight}px; 
-    font-size: 22px;
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: groove;
-    padding: 16px;
-    box-sizing: border-box;
-`
-const Icon = styled.img`
-    display: block;
-    object-fit: contain;
-    width: 30px;
-    height: 30px;
-    margin-right:10px;
-`
+const CustomCheckbox = styled.div`
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    margin-right: 5px;
+`;
 
-const List = ({
-    iwidth = "20%",
-    iheight = 37,
-}) => {
+const Checkbox = styled.input`
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    display: none;
+`;
+
+const Input = styled.input`
+    border: none;
+`;
+
+const List = () => {
+
+    const [checkbox, setCheckbox] = useState(false);
+    const handleClick = () => setCheckbox(oldCheckbox => !oldCheckbox);
+
     return (
-        <ListItem>
-            <ListBox>
-             <Icon src= "./../assets/Check.png" />
-            <InputBox
-             iwidth={iwidth} 
-             iheight={iheight}/>
-             </ListBox>
-        </ListItem>
-    );
+        <Container>
+            <Container>
+                <CustomCheckbox onClick={handleClick}>
+                    {checkbox ? "✔" : " "}
+                </CustomCheckbox>
+                <Checkbox
+                    type="checkbox"
+                    value={checkbox.value}
+                />
+            </Container>
+            <Input type="text" placeholder="Subtitle" />
+        </Container >
+    )
 };
 
 export default List;
