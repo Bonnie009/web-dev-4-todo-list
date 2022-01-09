@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // + New To-Do button
@@ -12,7 +12,7 @@ const ListItem = styled.button`
 `
 
 const NewList = ({
-    subtitle="+ New To-Do"
+    subtitle = "+ New To-Do"
 }) => {
     // const AddNew = () =>{
     //     const ul = document.getElementById("list"); //Gets the whole list ul
@@ -25,8 +25,8 @@ const NewList = ({
 
     const createItems = () => {
         setItems(oldItems => [...oldItems, {
-            id:1,
-            title:"subtitle"
+            id: 1,
+            title: "subtitle"
         }])
     }
 
@@ -41,5 +41,5 @@ const NewList = ({
         </div>
     );
 };
- 
+
 export default NewList;
