@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 // import components
 // import List from '../components/list/list'
-// import NewList from '../components/new-list/new-list'
+import NewList from '../components/new-list/new-list'
 // import ProgressBar from '../components/progress-bar/progress-bar'
 
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
       <h1>Hello Everyone!</h1>
       {/* add your components here */}
       {/* <List />
-      <NewList />
       <ProgressBar /> */}
+      <NewList />
     </div>
   )
 }
