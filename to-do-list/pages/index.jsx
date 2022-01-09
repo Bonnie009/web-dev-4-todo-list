@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 // import components
-// import List from '../components/list/list'
-// import NewList from '../components/new-list/new-list'
-// import ProgressBar from '../components/progress-bar/progress-bar'
+import List from '../components/list/list'
+import NewList from '../components/new-list/new-list'
+import ProgressBar from '../components/progress-bar/progress-bar'
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
       </Head>
       <h1>My To-Do List</h1>
       {/* add your components here */}
-      {/* <List />
+      <List />
+      <NewList />
       <ProgressBar />
-      <NewList /> */}
     </div>
   )
 }
