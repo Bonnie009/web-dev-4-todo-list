@@ -1,22 +1,14 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-// import components
-// import List from '../components/list/list'
-// import NewList from '../components/new-list/new-list'
-// import ProgressBar from '../components/progress-bar/progress-bar'
+import { Items } from "../components/Items";
+import { ItemAdder } from "../components/ItemAdder";
+import { usePersistedList } from "../hooks/usePersistedList";
 
 export default function Home() {
+  const { list, addToList, replaceList } = usePersistedList("todo");
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>To do list</title>
-        <meta name="description" content="Web Dev 4 project" />
-      </Head>
-      <h1>My To-Do List</h1>
-      {/* add your components here */}
-      {/* <List />
-      <ProgressBar />
-      <NewList /> */}
+    <div>
+      <Items list={list} replaceList={replaceList} />
+      <ItemAdder addToList={addToList} />
     </div>
-  )
+  );
 }
