@@ -1,5 +1,30 @@
 /* Lance will style here */
 
+/*This is the Main body*/
+.container{
+  width: 400px;
+  height: 100%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: static;
+}
+
+/*This is the Title To do List*/
+.title{
+  color:gray;
+  display: flex;
+  justify-content: center;
+  
+}
+
+/*This component is just for deleting*/
+.delete{
+  color:gray;
+}
+
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

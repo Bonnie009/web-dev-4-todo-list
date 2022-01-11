@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "../styles/Home.module.css";
+
 
 export const Items = ({ list, replaceList }) => {
   const toggleItemCompletion = (itemId) => {
@@ -36,7 +38,7 @@ export const Items = ({ list, replaceList }) => {
             value={item.title}
             onChange={(e) => updateItemTitle(e.target.value, item.itemId)}
           />
-          <span onClick={() => removeItem(item.itemId)}>X</span>
+          <span className={styles.delete} onClick={() => removeItem(item.itemId)}>X</span>
         </div>
       ))}
       {`${list.filter((item) => item.isCompleted).length}/${list.length}`}
