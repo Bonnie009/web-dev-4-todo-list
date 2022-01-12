@@ -2,9 +2,9 @@
 
 /*This is the Main body*/
 .container{
-  width: 400px;
+  width: 500px;
   height: 100%;
-  background-color: lightblue;
+  background-color: #856dbc;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -13,15 +13,24 @@
 
 /*This is the Title To do List*/
 .title{
-  color:gray;
+  color:white;
   display: flex;
   justify-content: center;
   
 }
 
+.olist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 /*This component is just for deleting*/
 .delete{
-  color:gray;
+  color:white;
 }
 
 

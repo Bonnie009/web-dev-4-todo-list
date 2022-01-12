@@ -25,7 +25,7 @@ export const Items = ({ list, replaceList }) => {
   };
 
   return (
-    <div>
+    <div className={styles.olist}>
       {list.map((item) => (
         <div key={item.itemId}>
           <input
