@@ -14,3 +14,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+input {
+  background-color: #232931;
+  border: 1px solid gray;
+}
+
+p {
+  color: white;
+}

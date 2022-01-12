@@ -29,6 +29,7 @@ export const Items = ({ list, replaceList }) => {
       {list.map((item) => (
         <div key={item.itemId}>
           <input
+            className={styles.inpStyle}
             type="checkbox"
             checked={item.isCompleted}
             onChange={() => toggleItemCompletion(item.itemId)}
@@ -41,7 +42,7 @@ export const Items = ({ list, replaceList }) => {
           <span className={styles.delete} onClick={() => removeItem(item.itemId)}>X</span>
         </div>
       ))}
-      {`${list.filter((item) => item.isCompleted).length}/${list.length}`}
+      <p>Completed {`${list.filter((item) => item.isCompleted).length} out of ${list.length}`}</p>
     </div>
   );
 };

@@ -9,5 +9,5 @@ export const ItemAdder = ({ addToList }) => {
       itemId: uuid(),
     });
 
-  return <button onClick={addItem}>Click Me</button>;
+  return <button onClick={addItem}>Add new to-do</button>;
 };

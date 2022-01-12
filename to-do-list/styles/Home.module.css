@@ -4,7 +4,8 @@
 .container{
   width: 500px;
   height: 100%;
-  background-color: #856dbc;
+  background-color: #232931;
+  /* background-color: #856dbc; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -26,6 +27,10 @@
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.intStyle{
+  background-color: #232931;
 }
 
 /*This component is just for deleting*/
