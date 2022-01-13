@@ -27,7 +27,7 @@ export const Items = ({ list, replaceList }) => {
   return (
     <div className={styles.olist}>
       {list.map((item) => (
-        <div key={item.itemId}>
+        <div className={styles.box} key={item.itemId}>
           <input
             className={styles.inpStyle}
             type="checkbox"

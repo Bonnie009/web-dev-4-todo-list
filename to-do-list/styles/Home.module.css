@@ -31,13 +31,18 @@
 
 .intStyle{
   background-color: #232931;
+  
 }
 
 /*This component is just for deleting*/
 .delete{
   color:white;
+  padding-left: 10px;
 }
 
+.box{
+  padding-top: 10px;
+}
 
 @media (max-width: 600px) {
   .grid {
